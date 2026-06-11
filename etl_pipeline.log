@@ -441,3 +441,438 @@ sqlalchemy.exc.OperationalError: (pymysql.err.OperationalError) (2006, "MySQL se
 [2026-06-10 18:37:28] INFO [Orchestrator.run_pipeline:44]   ETL PIPELINE RUN COMPLETED SUCCESSFULLY!    
 [2026-06-10 18:37:28] INFO [Orchestrator.run_pipeline:45]   Total execution time: 5.93 seconds.
 [2026-06-10 18:37:28] INFO [Orchestrator.run_pipeline:46] ==============================================
+[2026-06-10 19:42:48] INFO [Orchestrator.run_pipeline:13] ==============================================
+[2026-06-10 19:42:48] INFO [Orchestrator.run_pipeline:14]   STARTING PYTHON ETL PIPELINE REPLACEMENT    
+[2026-06-10 19:42:48] INFO [Orchestrator.run_pipeline:15] ==============================================
+[2026-06-10 19:42:48] INFO [Orchestrator.run_pipeline:22] [ETL PHASE 1/3] Extracting raw files...
+[2026-06-10 19:42:48] INFO [Extract.extract_csv:34] Extracting AdventureWorks_Calendar.csv.csv from path: C:\Users\pc\Desktop\BI\Dataset\AdventureWorks_Calendar.csv.csv
+[2026-06-10 19:42:48] INFO [Extract.extract_csv:39] Successfully loaded AdventureWorks_Calendar.csv.csv with utf-8-sig encoding. Shape: (912, 1)
+[2026-06-10 19:42:48] INFO [Extract.extract_csv:34] Extracting AdventureWorks_Customers.csv.csv from path: C:\Users\pc\Desktop\BI\Dataset\AdventureWorks_Customers.csv.csv
+[2026-06-10 19:42:48] WARNING [Extract.extract_csv:43] UTF-8 decode failed for AdventureWorks_Customers.csv.csv. Retrying with ISO-8859-1 or latin-1...
+[2026-06-10 19:42:48] INFO [Extract.extract_csv:45] Successfully loaded AdventureWorks_Customers.csv.csv with latin-1 fallback. Shape: (18148, 13)
+[2026-06-10 19:42:48] INFO [Extract.extract_csv:34] Extracting AdventureWorks_Product_Categories.csv.csv from path: C:\Users\pc\Desktop\BI\Dataset\AdventureWorks_Product_Categories.csv.csv
+[2026-06-10 19:42:48] INFO [Extract.extract_csv:39] Successfully loaded AdventureWorks_Product_Categories.csv.csv with utf-8-sig encoding. Shape: (4, 2)
+[2026-06-10 19:42:48] INFO [Extract.extract_csv:34] Extracting AdventureWorks_Product_Subcategories.csv.csv from path: C:\Users\pc\Desktop\BI\Dataset\AdventureWorks_Product_Subcategories.csv.csv
+[2026-06-10 19:42:48] INFO [Extract.extract_csv:39] Successfully loaded AdventureWorks_Product_Subcategories.csv.csv with utf-8-sig encoding. Shape: (37, 3)
+[2026-06-10 19:42:48] INFO [Extract.extract_csv:34] Extracting AdventureWorks_Products.csv.csv from path: C:\Users\pc\Desktop\BI\Dataset\AdventureWorks_Products.csv.csv
+[2026-06-10 19:42:48] INFO [Extract.extract_csv:39] Successfully loaded AdventureWorks_Products.csv.csv with utf-8-sig encoding. Shape: (293, 11)
+[2026-06-10 19:42:48] INFO [Extract.extract_csv:34] Extracting AdventureWorks_Returns.csv.csv from path: C:\Users\pc\Desktop\BI\Dataset\AdventureWorks_Returns.csv.csv
+[2026-06-10 19:42:48] INFO [Extract.extract_csv:39] Successfully loaded AdventureWorks_Returns.csv.csv with utf-8-sig encoding. Shape: (1809, 4)
+[2026-06-10 19:42:48] INFO [Extract.extract_csv:34] Extracting AdventureWorks_Territories.csv.csv from path: C:\Users\pc\Desktop\BI\Dataset\AdventureWorks_Territories.csv.csv
+[2026-06-10 19:42:48] INFO [Extract.extract_csv:39] Successfully loaded AdventureWorks_Territories.csv.csv with utf-8-sig encoding. Shape: (10, 4)
+[2026-06-10 19:42:48] INFO [Extract.extract_csv:34] Extracting AdventureWorks_Sales_2015.csv.csv from path: C:\Users\pc\Desktop\BI\Dataset\Sales\AdventureWorks_Sales_2015.csv.csv
+[2026-06-10 19:42:48] INFO [Extract.extract_csv:39] Successfully loaded AdventureWorks_Sales_2015.csv.csv with utf-8-sig encoding. Shape: (2630, 8)
+[2026-06-10 19:42:48] INFO [Extract.extract_csv:34] Extracting AdventureWorks_Sales_2016.csv.csv from path: C:\Users\pc\Desktop\BI\Dataset\Sales\AdventureWorks_Sales_2016.csv.csv
+[2026-06-10 19:42:48] INFO [Extract.extract_csv:39] Successfully loaded AdventureWorks_Sales_2016.csv.csv with utf-8-sig encoding. Shape: (23935, 8)
+[2026-06-10 19:42:48] INFO [Extract.extract_csv:34] Extracting AdventureWorks_Sales_2017.csv.csv from path: C:\Users\pc\Desktop\BI\Dataset\Sales\AdventureWorks_Sales_2017.csv.csv
+[2026-06-10 19:42:48] INFO [Extract.extract_csv:39] Successfully loaded AdventureWorks_Sales_2017.csv.csv with utf-8-sig encoding. Shape: (29481, 8)
+[2026-06-10 19:42:48] INFO [Extract.extract_all:85] Unifying sales datasets (2015, 2016, 2017)...
+[2026-06-10 19:42:48] INFO [Extract.extract_all:87] Unified Sales dataset shape: (56046, 8)
+[2026-06-10 19:42:48] INFO [Orchestrator.run_pipeline:25] Extraction completed in 0.71 seconds.
+[2026-06-10 19:42:48] INFO [Orchestrator.run_pipeline:29] [ETL PHASE 2/3] Transforming datasets...
+[2026-06-10 19:42:48] INFO [Transform.transform_territories:289] Transforming Territories lookup...
+[2026-06-10 19:42:48] INFO [Transform.transform_product_categories:304] Transforming Product Categories lookup...
+[2026-06-10 19:42:48] INFO [Transform.transform_product_subcategories:315] Transforming Product Subcategories lookup...
+[2026-06-10 19:42:48] INFO [Transform.transform_calendar:152] Transforming Calendar dataset...
+[2026-06-10 19:42:48] INFO [Transform.transform_calendar:191] Calendar transformation complete. Shape: (912, 10)
+[2026-06-10 19:42:48] INFO [Transform.transform_customers:11] Transforming Customers dataset...
+[2026-06-10 19:42:51] INFO [Transform.transform_customers:101] Customers transformation complete. Shape: (18148, 21)
+[2026-06-10 19:42:51] INFO [Transform.transform_products:108] Transforming Products dataset...
+[2026-06-10 19:42:51] INFO [Transform.transform_products:145] Products transformation complete. Shape: (293, 14)
+[2026-06-10 19:42:51] INFO [Transform.transform_sales:198] Transforming Sales Fact dataset...
+[2026-06-10 19:42:52] INFO [Transform.transform_sales:226] Enforcing referential integrity on Sales Fact table...
+[2026-06-10 19:42:52] INFO [Transform.transform_sales:250] Sales Fact transformation complete. Final Rows: 56046 (Dropped 0 invalid rows)
+[2026-06-10 19:42:52] INFO [Transform.transform_returns:257] Transforming Returns Fact dataset...
+[2026-06-10 19:42:52] INFO [Transform.transform_returns:273] Enforcing referential integrity on Returns Fact table...
+[2026-06-10 19:42:52] INFO [Transform.transform_returns:282] Returns Fact transformation complete. Final Rows: 1809 (Dropped 0 invalid rows)
+[2026-06-10 19:42:52] INFO [Orchestrator.run_pipeline:32] Transformation completed in 3.53 seconds.
+[2026-06-10 19:42:52] INFO [Orchestrator.run_pipeline:36] [ETL PHASE 3/3] Loading processed data to MySQL...
+[2026-06-10 19:42:52] INFO [Load.get_db_engine:11] Initializing database connection engine...
+[2026-06-10 19:42:54] INFO [Load.get_db_engine:17] Database connection established successfully.
+[2026-06-10 19:42:54] INFO [Load.load_data:64] Beginning the database loading phase...
+[2026-06-10 19:42:54] INFO [Load.load_data:72] Loading 10 records into table `aw_territories_lookup`...
+[2026-06-10 19:42:54] INFO [Load.clear_table:28] Clearing existing data from table: aw_territories_lookup
+[2026-06-10 19:42:54] INFO [Load.clear_table:35] Table aw_territories_lookup truncated successfully.
+[2026-06-10 19:42:54] INFO [Load.load_data:86] Successfully loaded `aw_territories_lookup` table.
+[2026-06-10 19:42:54] INFO [Load.load_data:72] Loading 4 records into table `aw_product_category_lookup`...
+[2026-06-10 19:42:54] INFO [Load.clear_table:28] Clearing existing data from table: aw_product_category_lookup
+[2026-06-10 19:42:54] INFO [Load.clear_table:35] Table aw_product_category_lookup truncated successfully.
+[2026-06-10 19:42:54] INFO [Load.load_data:86] Successfully loaded `aw_product_category_lookup` table.
+[2026-06-10 19:42:54] INFO [Load.load_data:72] Loading 37 records into table `aw_product_subcategory_lookup`...
+[2026-06-10 19:42:54] INFO [Load.clear_table:28] Clearing existing data from table: aw_product_subcategory_lookup
+[2026-06-10 19:42:54] INFO [Load.clear_table:35] Table aw_product_subcategory_lookup truncated successfully.
+[2026-06-10 19:42:54] INFO [Load.load_data:86] Successfully loaded `aw_product_subcategory_lookup` table.
+[2026-06-10 19:42:54] INFO [Load.load_data:72] Loading 912 records into table `aw_calendar_lookup`...
+[2026-06-10 19:42:54] INFO [Load.clear_table:28] Clearing existing data from table: aw_calendar_lookup
+[2026-06-10 19:42:54] INFO [Load.clear_table:35] Table aw_calendar_lookup truncated successfully.
+[2026-06-10 19:42:55] INFO [Load.load_data:86] Successfully loaded `aw_calendar_lookup` table.
+[2026-06-10 19:42:55] INFO [Load.load_data:72] Loading 18148 records into table `aw_customers_lookup`...
+[2026-06-10 19:42:55] INFO [Load.clear_table:28] Clearing existing data from table: aw_customers_lookup
+[2026-06-10 19:42:55] INFO [Load.clear_table:35] Table aw_customers_lookup truncated successfully.
+[2026-06-10 19:42:59] INFO [Load.load_data:86] Successfully loaded `aw_customers_lookup` table.
+[2026-06-10 19:42:59] INFO [Load.load_data:72] Loading 293 records into table `aw_products_lookup`...
+[2026-06-10 19:42:59] INFO [Load.clear_table:28] Clearing existing data from table: aw_products_lookup
+[2026-06-10 19:42:59] INFO [Load.clear_table:35] Table aw_products_lookup truncated successfully.
+[2026-06-10 19:42:59] INFO [Load.load_data:86] Successfully loaded `aw_products_lookup` table.
+[2026-06-10 19:42:59] INFO [Load.load_data:72] Loading 56046 records into table `aw_sales`...
+[2026-06-10 19:42:59] INFO [Load.clear_table:28] Clearing existing data from table: aw_sales
+[2026-06-10 19:42:59] INFO [Load.clear_table:35] Table aw_sales truncated successfully.
+[2026-06-10 19:43:03] INFO [Load.load_data:86] Successfully loaded `aw_sales` table.
+[2026-06-10 19:43:03] INFO [Load.load_data:72] Loading 1809 records into table `aw_returns`...
+[2026-06-10 19:43:03] INFO [Load.clear_table:28] Clearing existing data from table: aw_returns
+[2026-06-10 19:43:03] INFO [Load.clear_table:35] Table aw_returns truncated successfully.
+[2026-06-10 19:43:04] INFO [Load.load_data:86] Successfully loaded `aw_returns` table.
+[2026-06-10 19:43:04] INFO [Load.load_data:91] Loading phase completed successfully.
+[2026-06-10 19:43:04] INFO [Orchestrator.run_pipeline:40] Loading completed in 11.88 seconds.
+[2026-06-10 19:43:04] INFO [Orchestrator.run_pipeline:43] ==============================================
+[2026-06-10 19:43:04] INFO [Orchestrator.run_pipeline:44]   ETL PIPELINE RUN COMPLETED SUCCESSFULLY!    
+[2026-06-10 19:43:04] INFO [Orchestrator.run_pipeline:45]   Total execution time: 16.11 seconds.
+[2026-06-10 19:43:04] INFO [Orchestrator.run_pipeline:46] ==============================================
+[2026-06-10 19:48:12] INFO [Orchestrator.run_pipeline:13] ==============================================
+[2026-06-10 19:48:12] INFO [Orchestrator.run_pipeline:14]   STARTING PYTHON ETL PIPELINE REPLACEMENT    
+[2026-06-10 19:48:12] INFO [Orchestrator.run_pipeline:15] ==============================================
+[2026-06-10 19:48:12] INFO [Orchestrator.run_pipeline:22] [ETL PHASE 1/3] Extracting raw files...
+[2026-06-10 19:48:12] INFO [Extract.extract_csv:34] Extracting AdventureWorks_Calendar.csv.csv from path: C:\Users\pc\Desktop\BI\Dataset\AdventureWorks_Calendar.csv.csv
+[2026-06-10 19:48:12] INFO [Extract.extract_csv:39] Successfully loaded AdventureWorks_Calendar.csv.csv with utf-8-sig encoding. Shape: (912, 1)
+[2026-06-10 19:48:12] INFO [Extract.extract_csv:34] Extracting AdventureWorks_Customers.csv.csv from path: C:\Users\pc\Desktop\BI\Dataset\AdventureWorks_Customers.csv.csv
+[2026-06-10 19:48:12] WARNING [Extract.extract_csv:43] UTF-8 decode failed for AdventureWorks_Customers.csv.csv. Retrying with ISO-8859-1 or latin-1...
+[2026-06-10 19:48:12] INFO [Extract.extract_csv:45] Successfully loaded AdventureWorks_Customers.csv.csv with latin-1 fallback. Shape: (18148, 13)
+[2026-06-10 19:48:12] INFO [Extract.extract_csv:34] Extracting AdventureWorks_Product_Categories.csv.csv from path: C:\Users\pc\Desktop\BI\Dataset\AdventureWorks_Product_Categories.csv.csv
+[2026-06-10 19:48:12] INFO [Extract.extract_csv:39] Successfully loaded AdventureWorks_Product_Categories.csv.csv with utf-8-sig encoding. Shape: (4, 2)
+[2026-06-10 19:48:12] INFO [Extract.extract_csv:34] Extracting AdventureWorks_Product_Subcategories.csv.csv from path: C:\Users\pc\Desktop\BI\Dataset\AdventureWorks_Product_Subcategories.csv.csv
+[2026-06-10 19:48:12] INFO [Extract.extract_csv:39] Successfully loaded AdventureWorks_Product_Subcategories.csv.csv with utf-8-sig encoding. Shape: (37, 3)
+[2026-06-10 19:48:12] INFO [Extract.extract_csv:34] Extracting AdventureWorks_Products.csv.csv from path: C:\Users\pc\Desktop\BI\Dataset\AdventureWorks_Products.csv.csv
+[2026-06-10 19:48:12] INFO [Extract.extract_csv:39] Successfully loaded AdventureWorks_Products.csv.csv with utf-8-sig encoding. Shape: (293, 11)
+[2026-06-10 19:48:12] INFO [Extract.extract_csv:34] Extracting AdventureWorks_Returns.csv.csv from path: C:\Users\pc\Desktop\BI\Dataset\AdventureWorks_Returns.csv.csv
+[2026-06-10 19:48:12] INFO [Extract.extract_csv:39] Successfully loaded AdventureWorks_Returns.csv.csv with utf-8-sig encoding. Shape: (1809, 4)
+[2026-06-10 19:48:12] INFO [Extract.extract_csv:34] Extracting AdventureWorks_Territories.csv.csv from path: C:\Users\pc\Desktop\BI\Dataset\AdventureWorks_Territories.csv.csv
+[2026-06-10 19:48:12] INFO [Extract.extract_csv:39] Successfully loaded AdventureWorks_Territories.csv.csv with utf-8-sig encoding. Shape: (10, 4)
+[2026-06-10 19:48:12] INFO [Extract.extract_csv:34] Extracting AdventureWorks_Sales_2015.csv.csv from path: C:\Users\pc\Desktop\BI\Dataset\Sales\AdventureWorks_Sales_2015.csv.csv
+[2026-06-10 19:48:12] INFO [Extract.extract_csv:39] Successfully loaded AdventureWorks_Sales_2015.csv.csv with utf-8-sig encoding. Shape: (2630, 8)
+[2026-06-10 19:48:12] INFO [Extract.extract_csv:34] Extracting AdventureWorks_Sales_2016.csv.csv from path: C:\Users\pc\Desktop\BI\Dataset\Sales\AdventureWorks_Sales_2016.csv.csv
+[2026-06-10 19:48:12] INFO [Extract.extract_csv:39] Successfully loaded AdventureWorks_Sales_2016.csv.csv with utf-8-sig encoding. Shape: (23935, 8)
+[2026-06-10 19:48:12] INFO [Extract.extract_csv:34] Extracting AdventureWorks_Sales_2017.csv.csv from path: C:\Users\pc\Desktop\BI\Dataset\Sales\AdventureWorks_Sales_2017.csv.csv
+[2026-06-10 19:48:12] INFO [Extract.extract_csv:39] Successfully loaded AdventureWorks_Sales_2017.csv.csv with utf-8-sig encoding. Shape: (29481, 8)
+[2026-06-10 19:48:12] INFO [Extract.extract_all:85] Unifying sales datasets (2015, 2016, 2017)...
+[2026-06-10 19:48:12] INFO [Extract.extract_all:87] Unified Sales dataset shape: (56046, 8)
+[2026-06-10 19:48:12] INFO [Orchestrator.run_pipeline:25] Extraction completed in 0.24 seconds.
+[2026-06-10 19:48:12] INFO [Orchestrator.run_pipeline:29] [ETL PHASE 2/3] Transforming datasets...
+[2026-06-10 19:48:12] INFO [Transform.transform_territories:289] Transforming Territories lookup...
+[2026-06-10 19:48:12] INFO [Transform.transform_product_categories:304] Transforming Product Categories lookup...
+[2026-06-10 19:48:12] INFO [Transform.transform_product_subcategories:315] Transforming Product Subcategories lookup...
+[2026-06-10 19:48:12] INFO [Transform.transform_calendar:152] Transforming Calendar dataset...
+[2026-06-10 19:48:12] INFO [Transform.transform_calendar:191] Calendar transformation complete. Shape: (912, 10)
+[2026-06-10 19:48:12] INFO [Transform.transform_customers:11] Transforming Customers dataset...
+[2026-06-10 19:48:14] INFO [Transform.transform_customers:101] Customers transformation complete. Shape: (18148, 21)
+[2026-06-10 19:48:14] INFO [Transform.transform_products:108] Transforming Products dataset...
+[2026-06-10 19:48:14] INFO [Transform.transform_products:145] Products transformation complete. Shape: (293, 14)
+[2026-06-10 19:48:14] INFO [Transform.transform_sales:198] Transforming Sales Fact dataset...
+[2026-06-10 19:48:14] INFO [Transform.transform_sales:226] Enforcing referential integrity on Sales Fact table...
+[2026-06-10 19:48:14] INFO [Transform.transform_sales:250] Sales Fact transformation complete. Final Rows: 56046 (Dropped 0 invalid rows)
+[2026-06-10 19:48:14] INFO [Transform.transform_returns:257] Transforming Returns Fact dataset...
+[2026-06-10 19:48:14] INFO [Transform.transform_returns:273] Enforcing referential integrity on Returns Fact table...
+[2026-06-10 19:48:14] INFO [Transform.transform_returns:282] Returns Fact transformation complete. Final Rows: 1809 (Dropped 0 invalid rows)
+[2026-06-10 19:48:14] INFO [Orchestrator.run_pipeline:32] Transformation completed in 1.74 seconds.
+[2026-06-10 19:48:14] INFO [Orchestrator.run_pipeline:36] [ETL PHASE 3/3] Loading processed data to MySQL...
+[2026-06-10 19:48:14] INFO [Load.get_db_engine:11] Initializing database connection engine...
+[2026-06-10 19:48:14] INFO [Load.get_db_engine:17] Database connection established successfully.
+[2026-06-10 19:48:14] INFO [Load.load_data:64] Beginning the database loading phase...
+[2026-06-10 19:48:14] INFO [Load.load_data:72] Loading 10 records into table `aw_territories_lookup`...
+[2026-06-10 19:48:14] INFO [Load.clear_table:28] Clearing existing data from table: aw_territories_lookup
+[2026-06-10 19:48:14] INFO [Load.clear_table:35] Table aw_territories_lookup truncated successfully.
+[2026-06-10 19:48:14] INFO [Load.load_data:86] Successfully loaded `aw_territories_lookup` table.
+[2026-06-10 19:48:14] INFO [Load.load_data:72] Loading 4 records into table `aw_product_category_lookup`...
+[2026-06-10 19:48:14] INFO [Load.clear_table:28] Clearing existing data from table: aw_product_category_lookup
+[2026-06-10 19:48:15] INFO [Load.clear_table:35] Table aw_product_category_lookup truncated successfully.
+[2026-06-10 19:48:15] INFO [Load.load_data:86] Successfully loaded `aw_product_category_lookup` table.
+[2026-06-10 19:48:15] INFO [Load.load_data:72] Loading 37 records into table `aw_product_subcategory_lookup`...
+[2026-06-10 19:48:15] INFO [Load.clear_table:28] Clearing existing data from table: aw_product_subcategory_lookup
+[2026-06-10 19:48:15] INFO [Load.clear_table:35] Table aw_product_subcategory_lookup truncated successfully.
+[2026-06-10 19:48:15] INFO [Load.load_data:86] Successfully loaded `aw_product_subcategory_lookup` table.
+[2026-06-10 19:48:15] INFO [Load.load_data:72] Loading 912 records into table `aw_calendar_lookup`...
+[2026-06-10 19:48:15] INFO [Load.clear_table:28] Clearing existing data from table: aw_calendar_lookup
+[2026-06-10 19:48:15] INFO [Load.clear_table:35] Table aw_calendar_lookup truncated successfully.
+[2026-06-10 19:48:15] INFO [Load.load_data:86] Successfully loaded `aw_calendar_lookup` table.
+[2026-06-10 19:48:15] INFO [Load.load_data:72] Loading 18148 records into table `aw_customers_lookup`...
+[2026-06-10 19:48:15] INFO [Load.clear_table:28] Clearing existing data from table: aw_customers_lookup
+[2026-06-10 19:48:15] INFO [Load.clear_table:35] Table aw_customers_lookup truncated successfully.
+[2026-06-10 19:48:17] INFO [Load.load_data:86] Successfully loaded `aw_customers_lookup` table.
+[2026-06-10 19:48:17] INFO [Load.load_data:72] Loading 293 records into table `aw_products_lookup`...
+[2026-06-10 19:48:17] INFO [Load.clear_table:28] Clearing existing data from table: aw_products_lookup
+[2026-06-10 19:48:17] INFO [Load.clear_table:35] Table aw_products_lookup truncated successfully.
+[2026-06-10 19:48:17] INFO [Load.load_data:86] Successfully loaded `aw_products_lookup` table.
+[2026-06-10 19:48:17] INFO [Load.load_data:72] Loading 56046 records into table `aw_sales`...
+[2026-06-10 19:48:17] INFO [Load.clear_table:28] Clearing existing data from table: aw_sales
+[2026-06-10 19:48:17] INFO [Load.clear_table:35] Table aw_sales truncated successfully.
+[2026-06-10 19:48:20] INFO [Load.load_data:86] Successfully loaded `aw_sales` table.
+[2026-06-10 19:48:20] INFO [Load.load_data:72] Loading 1809 records into table `aw_returns`...
+[2026-06-10 19:48:20] INFO [Load.clear_table:28] Clearing existing data from table: aw_returns
+[2026-06-10 19:48:20] INFO [Load.clear_table:35] Table aw_returns truncated successfully.
+[2026-06-10 19:48:21] INFO [Load.load_data:86] Successfully loaded `aw_returns` table.
+[2026-06-10 19:48:21] INFO [Load.load_data:91] Loading phase completed successfully.
+[2026-06-10 19:48:21] INFO [Orchestrator.run_pipeline:40] Loading completed in 6.48 seconds.
+[2026-06-10 19:48:21] INFO [Orchestrator.run_pipeline:43] ==============================================
+[2026-06-10 19:48:21] INFO [Orchestrator.run_pipeline:44]   ETL PIPELINE RUN COMPLETED SUCCESSFULLY!    
+[2026-06-10 19:48:21] INFO [Orchestrator.run_pipeline:45]   Total execution time: 8.47 seconds.
+[2026-06-10 19:48:21] INFO [Orchestrator.run_pipeline:46] ==============================================
+[2026-06-10 22:08:13] INFO [Orchestrator.run_pipeline:13] ==============================================
+[2026-06-10 22:08:13] INFO [Orchestrator.run_pipeline:14]   STARTING PYTHON ETL PIPELINE REPLACEMENT    
+[2026-06-10 22:08:13] INFO [Orchestrator.run_pipeline:15] ==============================================
+[2026-06-10 22:08:13] INFO [Orchestrator.run_pipeline:22] [ETL PHASE 1/3] Extracting raw files...
+[2026-06-10 22:08:13] INFO [Extract.extract_csv:34] Extracting AdventureWorks_Calendar.csv.csv from path: C:\Users\pc\Desktop\BI\Dataset\AdventureWorks_Calendar.csv.csv
+[2026-06-10 22:08:13] INFO [Extract.extract_csv:39] Successfully loaded AdventureWorks_Calendar.csv.csv with utf-8-sig encoding. Shape: (912, 1)
+[2026-06-10 22:08:13] INFO [Extract.extract_csv:34] Extracting AdventureWorks_Customers.csv.csv from path: C:\Users\pc\Desktop\BI\Dataset\AdventureWorks_Customers.csv.csv
+[2026-06-10 22:08:13] WARNING [Extract.extract_csv:43] UTF-8 decode failed for AdventureWorks_Customers.csv.csv. Retrying with ISO-8859-1 or latin-1...
+[2026-06-10 22:08:13] INFO [Extract.extract_csv:45] Successfully loaded AdventureWorks_Customers.csv.csv with latin-1 fallback. Shape: (18148, 13)
+[2026-06-10 22:08:13] INFO [Extract.extract_csv:34] Extracting AdventureWorks_Product_Categories.csv.csv from path: C:\Users\pc\Desktop\BI\Dataset\AdventureWorks_Product_Categories.csv.csv
+[2026-06-10 22:08:13] INFO [Extract.extract_csv:39] Successfully loaded AdventureWorks_Product_Categories.csv.csv with utf-8-sig encoding. Shape: (4, 2)
+[2026-06-10 22:08:13] INFO [Extract.extract_csv:34] Extracting AdventureWorks_Product_Subcategories.csv.csv from path: C:\Users\pc\Desktop\BI\Dataset\AdventureWorks_Product_Subcategories.csv.csv
+[2026-06-10 22:08:13] INFO [Extract.extract_csv:39] Successfully loaded AdventureWorks_Product_Subcategories.csv.csv with utf-8-sig encoding. Shape: (37, 3)
+[2026-06-10 22:08:13] INFO [Extract.extract_csv:34] Extracting AdventureWorks_Products.csv.csv from path: C:\Users\pc\Desktop\BI\Dataset\AdventureWorks_Products.csv.csv
+[2026-06-10 22:08:13] INFO [Extract.extract_csv:39] Successfully loaded AdventureWorks_Products.csv.csv with utf-8-sig encoding. Shape: (293, 11)
+[2026-06-10 22:08:13] INFO [Extract.extract_csv:34] Extracting AdventureWorks_Returns.csv.csv from path: C:\Users\pc\Desktop\BI\Dataset\AdventureWorks_Returns.csv.csv
+[2026-06-10 22:08:13] INFO [Extract.extract_csv:39] Successfully loaded AdventureWorks_Returns.csv.csv with utf-8-sig encoding. Shape: (1809, 4)
+[2026-06-10 22:08:13] INFO [Extract.extract_csv:34] Extracting AdventureWorks_Territories.csv.csv from path: C:\Users\pc\Desktop\BI\Dataset\AdventureWorks_Territories.csv.csv
+[2026-06-10 22:08:13] INFO [Extract.extract_csv:39] Successfully loaded AdventureWorks_Territories.csv.csv with utf-8-sig encoding. Shape: (10, 4)
+[2026-06-10 22:08:13] INFO [Extract.extract_csv:34] Extracting AdventureWorks_Sales_2015.csv.csv from path: C:\Users\pc\Desktop\BI\Dataset\Sales\AdventureWorks_Sales_2015.csv.csv
+[2026-06-10 22:08:13] INFO [Extract.extract_csv:39] Successfully loaded AdventureWorks_Sales_2015.csv.csv with utf-8-sig encoding. Shape: (2630, 8)
+[2026-06-10 22:08:13] INFO [Extract.extract_csv:34] Extracting AdventureWorks_Sales_2016.csv.csv from path: C:\Users\pc\Desktop\BI\Dataset\Sales\AdventureWorks_Sales_2016.csv.csv
+[2026-06-10 22:08:13] INFO [Extract.extract_csv:39] Successfully loaded AdventureWorks_Sales_2016.csv.csv with utf-8-sig encoding. Shape: (23935, 8)
+[2026-06-10 22:08:13] INFO [Extract.extract_csv:34] Extracting AdventureWorks_Sales_2017.csv.csv from path: C:\Users\pc\Desktop\BI\Dataset\Sales\AdventureWorks_Sales_2017.csv.csv
+[2026-06-10 22:08:13] INFO [Extract.extract_csv:39] Successfully loaded AdventureWorks_Sales_2017.csv.csv with utf-8-sig encoding. Shape: (29481, 8)
+[2026-06-10 22:08:13] INFO [Extract.extract_all:85] Unifying sales datasets (2015, 2016, 2017)...
+[2026-06-10 22:08:13] INFO [Extract.extract_all:87] Unified Sales dataset shape: (56046, 8)
+[2026-06-10 22:08:13] INFO [Orchestrator.run_pipeline:25] Extraction completed in 0.33 seconds.
+[2026-06-10 22:08:13] INFO [Orchestrator.run_pipeline:29] [ETL PHASE 2/3] Transforming datasets...
+[2026-06-10 22:08:13] INFO [Transform.transform_territories:289] Transforming Territories lookup...
+[2026-06-10 22:08:13] INFO [Transform.transform_product_categories:304] Transforming Product Categories lookup...
+[2026-06-10 22:08:13] INFO [Transform.transform_product_subcategories:315] Transforming Product Subcategories lookup...
+[2026-06-10 22:08:13] INFO [Transform.transform_calendar:152] Transforming Calendar dataset...
+[2026-06-10 22:08:13] INFO [Transform.transform_calendar:191] Calendar transformation complete. Shape: (912, 10)
+[2026-06-10 22:08:13] INFO [Transform.transform_customers:11] Transforming Customers dataset...
+[2026-06-10 22:08:14] INFO [Transform.transform_customers:101] Customers transformation complete. Shape: (18148, 21)
+[2026-06-10 22:08:14] INFO [Transform.transform_products:108] Transforming Products dataset...
+[2026-06-10 22:08:14] INFO [Transform.transform_products:145] Products transformation complete. Shape: (293, 14)
+[2026-06-10 22:08:14] INFO [Transform.transform_sales:198] Transforming Sales Fact dataset...
+[2026-06-10 22:08:14] INFO [Transform.transform_sales:226] Enforcing referential integrity on Sales Fact table...
+[2026-06-10 22:08:14] INFO [Transform.transform_sales:250] Sales Fact transformation complete. Final Rows: 56046 (Dropped 0 invalid rows)
+[2026-06-10 22:08:14] INFO [Transform.transform_returns:257] Transforming Returns Fact dataset...
+[2026-06-10 22:08:14] INFO [Transform.transform_returns:273] Enforcing referential integrity on Returns Fact table...
+[2026-06-10 22:08:14] INFO [Transform.transform_returns:282] Returns Fact transformation complete. Final Rows: 1809 (Dropped 0 invalid rows)
+[2026-06-10 22:08:14] INFO [Orchestrator.run_pipeline:32] Transformation completed in 0.94 seconds.
+[2026-06-10 22:08:14] INFO [Orchestrator.run_pipeline:36] [ETL PHASE 3/3] Loading processed data to MySQL...
+[2026-06-10 22:08:14] INFO [Load.get_db_engine:11] Initializing database connection engine...
+[2026-06-10 22:08:14] INFO [Load.get_db_engine:17] Database connection established successfully.
+[2026-06-10 22:08:14] INFO [Load.load_data:64] Beginning the database loading phase...
+[2026-06-10 22:08:14] INFO [Load.load_data:72] Loading 10 records into table `aw_territories_lookup`...
+[2026-06-10 22:08:14] INFO [Load.clear_table:28] Clearing existing data from table: aw_territories_lookup
+[2026-06-10 22:08:14] INFO [Load.clear_table:35] Table aw_territories_lookup truncated successfully.
+[2026-06-10 22:08:15] INFO [Load.load_data:86] Successfully loaded `aw_territories_lookup` table.
+[2026-06-10 22:08:15] INFO [Load.load_data:72] Loading 4 records into table `aw_product_category_lookup`...
+[2026-06-10 22:08:15] INFO [Load.clear_table:28] Clearing existing data from table: aw_product_category_lookup
+[2026-06-10 22:08:15] INFO [Load.clear_table:35] Table aw_product_category_lookup truncated successfully.
+[2026-06-10 22:08:15] INFO [Load.load_data:86] Successfully loaded `aw_product_category_lookup` table.
+[2026-06-10 22:08:15] INFO [Load.load_data:72] Loading 37 records into table `aw_product_subcategory_lookup`...
+[2026-06-10 22:08:15] INFO [Load.clear_table:28] Clearing existing data from table: aw_product_subcategory_lookup
+[2026-06-10 22:08:15] INFO [Load.clear_table:35] Table aw_product_subcategory_lookup truncated successfully.
+[2026-06-10 22:08:15] INFO [Load.load_data:86] Successfully loaded `aw_product_subcategory_lookup` table.
+[2026-06-10 22:08:15] INFO [Load.load_data:72] Loading 912 records into table `aw_calendar_lookup`...
+[2026-06-10 22:08:15] INFO [Load.clear_table:28] Clearing existing data from table: aw_calendar_lookup
+[2026-06-10 22:08:15] INFO [Load.clear_table:35] Table aw_calendar_lookup truncated successfully.
+[2026-06-10 22:08:15] INFO [Load.load_data:86] Successfully loaded `aw_calendar_lookup` table.
+[2026-06-10 22:08:15] INFO [Load.load_data:72] Loading 18148 records into table `aw_customers_lookup`...
+[2026-06-10 22:08:15] INFO [Load.clear_table:28] Clearing existing data from table: aw_customers_lookup
+[2026-06-10 22:08:15] INFO [Load.clear_table:35] Table aw_customers_lookup truncated successfully.
+[2026-06-10 22:08:16] INFO [Load.load_data:86] Successfully loaded `aw_customers_lookup` table.
+[2026-06-10 22:08:16] INFO [Load.load_data:72] Loading 293 records into table `aw_products_lookup`...
+[2026-06-10 22:08:16] INFO [Load.clear_table:28] Clearing existing data from table: aw_products_lookup
+[2026-06-10 22:08:16] INFO [Load.clear_table:35] Table aw_products_lookup truncated successfully.
+[2026-06-10 22:08:17] INFO [Load.load_data:86] Successfully loaded `aw_products_lookup` table.
+[2026-06-10 22:08:17] INFO [Load.load_data:72] Loading 56046 records into table `aw_sales`...
+[2026-06-10 22:08:17] INFO [Load.clear_table:28] Clearing existing data from table: aw_sales
+[2026-06-10 22:08:17] INFO [Load.clear_table:35] Table aw_sales truncated successfully.
+[2026-06-10 22:08:21] INFO [Load.load_data:86] Successfully loaded `aw_sales` table.
+[2026-06-10 22:08:21] INFO [Load.load_data:72] Loading 1809 records into table `aw_returns`...
+[2026-06-10 22:08:21] INFO [Load.clear_table:28] Clearing existing data from table: aw_returns
+[2026-06-10 22:08:21] INFO [Load.clear_table:35] Table aw_returns truncated successfully.
+[2026-06-10 22:08:22] INFO [Load.load_data:86] Successfully loaded `aw_returns` table.
+[2026-06-10 22:08:22] INFO [Load.load_data:91] Loading phase completed successfully.
+[2026-06-10 22:08:22] INFO [Orchestrator.run_pipeline:40] Loading completed in 7.31 seconds.
+[2026-06-10 22:08:22] INFO [Orchestrator.run_pipeline:43] ==============================================
+[2026-06-10 22:08:22] INFO [Orchestrator.run_pipeline:44]   ETL PIPELINE RUN COMPLETED SUCCESSFULLY!    
+[2026-06-10 22:08:22] INFO [Orchestrator.run_pipeline:45]   Total execution time: 8.58 seconds.
+[2026-06-10 22:08:22] INFO [Orchestrator.run_pipeline:46] ==============================================
+[2026-06-10 22:19:17] INFO [Orchestrator.run_pipeline:13] ==============================================
+[2026-06-10 22:19:17] INFO [Orchestrator.run_pipeline:14]   STARTING PYTHON ETL PIPELINE REPLACEMENT    
+[2026-06-10 22:19:17] INFO [Orchestrator.run_pipeline:15] ==============================================
+[2026-06-10 22:19:17] INFO [Orchestrator.run_pipeline:22] [ETL PHASE 1/3] Extracting raw files...
+[2026-06-10 22:19:17] INFO [Extract.extract_csv:34] Extracting AdventureWorks_Calendar.csv.csv from path: C:\Users\pc\Desktop\BI\Dataset\AdventureWorks_Calendar.csv.csv
+[2026-06-10 22:19:17] INFO [Extract.extract_csv:39] Successfully loaded AdventureWorks_Calendar.csv.csv with utf-8-sig encoding. Shape: (912, 1)
+[2026-06-10 22:19:17] INFO [Extract.extract_csv:34] Extracting AdventureWorks_Customers.csv.csv from path: C:\Users\pc\Desktop\BI\Dataset\AdventureWorks_Customers.csv.csv
+[2026-06-10 22:19:17] WARNING [Extract.extract_csv:43] UTF-8 decode failed for AdventureWorks_Customers.csv.csv. Retrying with ISO-8859-1 or latin-1...
+[2026-06-10 22:19:17] INFO [Extract.extract_csv:45] Successfully loaded AdventureWorks_Customers.csv.csv with latin-1 fallback. Shape: (18148, 13)
+[2026-06-10 22:19:17] INFO [Extract.extract_csv:34] Extracting AdventureWorks_Product_Categories.csv.csv from path: C:\Users\pc\Desktop\BI\Dataset\AdventureWorks_Product_Categories.csv.csv
+[2026-06-10 22:19:17] INFO [Extract.extract_csv:39] Successfully loaded AdventureWorks_Product_Categories.csv.csv with utf-8-sig encoding. Shape: (4, 2)
+[2026-06-10 22:19:17] INFO [Extract.extract_csv:34] Extracting AdventureWorks_Product_Subcategories.csv.csv from path: C:\Users\pc\Desktop\BI\Dataset\AdventureWorks_Product_Subcategories.csv.csv
+[2026-06-10 22:19:17] INFO [Extract.extract_csv:39] Successfully loaded AdventureWorks_Product_Subcategories.csv.csv with utf-8-sig encoding. Shape: (37, 3)
+[2026-06-10 22:19:17] INFO [Extract.extract_csv:34] Extracting AdventureWorks_Products.csv.csv from path: C:\Users\pc\Desktop\BI\Dataset\AdventureWorks_Products.csv.csv
+[2026-06-10 22:19:17] INFO [Extract.extract_csv:39] Successfully loaded AdventureWorks_Products.csv.csv with utf-8-sig encoding. Shape: (293, 11)
+[2026-06-10 22:19:17] INFO [Extract.extract_csv:34] Extracting AdventureWorks_Returns.csv.csv from path: C:\Users\pc\Desktop\BI\Dataset\AdventureWorks_Returns.csv.csv
+[2026-06-10 22:19:17] INFO [Extract.extract_csv:39] Successfully loaded AdventureWorks_Returns.csv.csv with utf-8-sig encoding. Shape: (1809, 4)
+[2026-06-10 22:19:17] INFO [Extract.extract_csv:34] Extracting AdventureWorks_Territories.csv.csv from path: C:\Users\pc\Desktop\BI\Dataset\AdventureWorks_Territories.csv.csv
+[2026-06-10 22:19:17] INFO [Extract.extract_csv:39] Successfully loaded AdventureWorks_Territories.csv.csv with utf-8-sig encoding. Shape: (10, 4)
+[2026-06-10 22:19:17] INFO [Extract.extract_csv:34] Extracting AdventureWorks_Sales_2015.csv.csv from path: C:\Users\pc\Desktop\BI\Dataset\Sales\AdventureWorks_Sales_2015.csv.csv
+[2026-06-10 22:19:17] INFO [Extract.extract_csv:39] Successfully loaded AdventureWorks_Sales_2015.csv.csv with utf-8-sig encoding. Shape: (2630, 8)
+[2026-06-10 22:19:17] INFO [Extract.extract_csv:34] Extracting AdventureWorks_Sales_2016.csv.csv from path: C:\Users\pc\Desktop\BI\Dataset\Sales\AdventureWorks_Sales_2016.csv.csv
+[2026-06-10 22:19:17] INFO [Extract.extract_csv:39] Successfully loaded AdventureWorks_Sales_2016.csv.csv with utf-8-sig encoding. Shape: (23935, 8)
+[2026-06-10 22:19:17] INFO [Extract.extract_csv:34] Extracting AdventureWorks_Sales_2017.csv.csv from path: C:\Users\pc\Desktop\BI\Dataset\Sales\AdventureWorks_Sales_2017.csv.csv
+[2026-06-10 22:19:17] INFO [Extract.extract_csv:39] Successfully loaded AdventureWorks_Sales_2017.csv.csv with utf-8-sig encoding. Shape: (29481, 8)
+[2026-06-10 22:19:17] INFO [Extract.extract_all:85] Unifying sales datasets (2015, 2016, 2017)...
+[2026-06-10 22:19:17] INFO [Extract.extract_all:87] Unified Sales dataset shape: (56046, 8)
+[2026-06-10 22:19:17] INFO [Orchestrator.run_pipeline:25] Extraction completed in 0.13 seconds.
+[2026-06-10 22:19:17] INFO [Orchestrator.run_pipeline:29] [ETL PHASE 2/3] Transforming datasets...
+[2026-06-10 22:19:17] INFO [Transform.transform_territories:289] Transforming Territories lookup...
+[2026-06-10 22:19:17] INFO [Transform.transform_product_categories:304] Transforming Product Categories lookup...
+[2026-06-10 22:19:17] INFO [Transform.transform_product_subcategories:315] Transforming Product Subcategories lookup...
+[2026-06-10 22:19:17] INFO [Transform.transform_calendar:152] Transforming Calendar dataset...
+[2026-06-10 22:19:17] INFO [Transform.transform_calendar:191] Calendar transformation complete. Shape: (912, 10)
+[2026-06-10 22:19:17] INFO [Transform.transform_customers:11] Transforming Customers dataset...
+[2026-06-10 22:19:18] INFO [Transform.transform_customers:101] Customers transformation complete. Shape: (18148, 21)
+[2026-06-10 22:19:18] INFO [Transform.transform_products:108] Transforming Products dataset...
+[2026-06-10 22:19:18] INFO [Transform.transform_products:145] Products transformation complete. Shape: (293, 14)
+[2026-06-10 22:19:18] INFO [Transform.transform_sales:198] Transforming Sales Fact dataset...
+[2026-06-10 22:19:18] INFO [Transform.transform_sales:226] Enforcing referential integrity on Sales Fact table...
+[2026-06-10 22:19:18] INFO [Transform.transform_sales:250] Sales Fact transformation complete. Final Rows: 56046 (Dropped 0 invalid rows)
+[2026-06-10 22:19:18] INFO [Transform.transform_returns:257] Transforming Returns Fact dataset...
+[2026-06-10 22:19:18] INFO [Transform.transform_returns:273] Enforcing referential integrity on Returns Fact table...
+[2026-06-10 22:19:18] INFO [Transform.transform_returns:282] Returns Fact transformation complete. Final Rows: 1809 (Dropped 0 invalid rows)
+[2026-06-10 22:19:18] INFO [Orchestrator.run_pipeline:32] Transformation completed in 0.64 seconds.
+[2026-06-10 22:19:18] INFO [Orchestrator.run_pipeline:36] [ETL PHASE 3/3] Loading processed data to MySQL...
+[2026-06-10 22:19:18] INFO [Load.get_db_engine:11] Initializing database connection engine...
+[2026-06-10 22:19:18] INFO [Load.get_db_engine:17] Database connection established successfully.
+[2026-06-10 22:19:18] INFO [Load.load_data:64] Beginning the database loading phase...
+[2026-06-10 22:19:18] INFO [Load.load_data:72] Loading 10 records into table `aw_territories_lookup`...
+[2026-06-10 22:19:18] INFO [Load.clear_table:28] Clearing existing data from table: aw_territories_lookup
+[2026-06-10 22:19:18] INFO [Load.clear_table:35] Table aw_territories_lookup truncated successfully.
+[2026-06-10 22:19:18] INFO [Load.load_data:86] Successfully loaded `aw_territories_lookup` table.
+[2026-06-10 22:19:18] INFO [Load.load_data:72] Loading 4 records into table `aw_product_category_lookup`...
+[2026-06-10 22:19:18] INFO [Load.clear_table:28] Clearing existing data from table: aw_product_category_lookup
+[2026-06-10 22:19:18] INFO [Load.clear_table:35] Table aw_product_category_lookup truncated successfully.
+[2026-06-10 22:19:18] INFO [Load.load_data:86] Successfully loaded `aw_product_category_lookup` table.
+[2026-06-10 22:19:18] INFO [Load.load_data:72] Loading 37 records into table `aw_product_subcategory_lookup`...
+[2026-06-10 22:19:18] INFO [Load.clear_table:28] Clearing existing data from table: aw_product_subcategory_lookup
+[2026-06-10 22:19:18] INFO [Load.clear_table:35] Table aw_product_subcategory_lookup truncated successfully.
+[2026-06-10 22:19:18] INFO [Load.load_data:86] Successfully loaded `aw_product_subcategory_lookup` table.
+[2026-06-10 22:19:18] INFO [Load.load_data:72] Loading 912 records into table `aw_calendar_lookup`...
+[2026-06-10 22:19:18] INFO [Load.clear_table:28] Clearing existing data from table: aw_calendar_lookup
+[2026-06-10 22:19:18] INFO [Load.clear_table:35] Table aw_calendar_lookup truncated successfully.
+[2026-06-10 22:19:18] INFO [Load.load_data:86] Successfully loaded `aw_calendar_lookup` table.
+[2026-06-10 22:19:18] INFO [Load.load_data:72] Loading 18148 records into table `aw_customers_lookup`...
+[2026-06-10 22:19:18] INFO [Load.clear_table:28] Clearing existing data from table: aw_customers_lookup
+[2026-06-10 22:19:18] INFO [Load.clear_table:35] Table aw_customers_lookup truncated successfully.
+[2026-06-10 22:19:20] INFO [Load.load_data:86] Successfully loaded `aw_customers_lookup` table.
+[2026-06-10 22:19:20] INFO [Load.load_data:72] Loading 293 records into table `aw_products_lookup`...
+[2026-06-10 22:19:20] INFO [Load.clear_table:28] Clearing existing data from table: aw_products_lookup
+[2026-06-10 22:19:20] INFO [Load.clear_table:35] Table aw_products_lookup truncated successfully.
+[2026-06-10 22:19:20] INFO [Load.load_data:86] Successfully loaded `aw_products_lookup` table.
+[2026-06-10 22:19:20] INFO [Load.load_data:72] Loading 56046 records into table `aw_sales`...
+[2026-06-10 22:19:20] INFO [Load.clear_table:28] Clearing existing data from table: aw_sales
+[2026-06-10 22:19:20] INFO [Load.clear_table:35] Table aw_sales truncated successfully.
+[2026-06-10 22:19:25] INFO [Load.load_data:86] Successfully loaded `aw_sales` table.
+[2026-06-10 22:19:25] INFO [Load.load_data:72] Loading 1809 records into table `aw_returns`...
+[2026-06-10 22:19:25] INFO [Load.clear_table:28] Clearing existing data from table: aw_returns
+[2026-06-10 22:19:25] INFO [Load.clear_table:35] Table aw_returns truncated successfully.
+[2026-06-10 22:19:25] INFO [Load.load_data:86] Successfully loaded `aw_returns` table.
+[2026-06-10 22:19:25] INFO [Load.load_data:91] Loading phase completed successfully.
+[2026-06-10 22:19:25] INFO [Orchestrator.run_pipeline:40] Loading completed in 7.18 seconds.
+[2026-06-10 22:19:25] INFO [Orchestrator.run_pipeline:43] ==============================================
+[2026-06-10 22:19:25] INFO [Orchestrator.run_pipeline:44]   ETL PIPELINE RUN COMPLETED SUCCESSFULLY!    
+[2026-06-10 22:19:25] INFO [Orchestrator.run_pipeline:45]   Total execution time: 7.95 seconds.
+[2026-06-10 22:19:25] INFO [Orchestrator.run_pipeline:46] ==============================================
+[2026-06-11 16:41:40] INFO [Orchestrator.run_pipeline:13] ==============================================
+[2026-06-11 16:41:40] INFO [Orchestrator.run_pipeline:14]   STARTING PYTHON ETL PIPELINE REPLACEMENT    
+[2026-06-11 16:41:40] INFO [Orchestrator.run_pipeline:15] ==============================================
+[2026-06-11 16:41:40] INFO [Orchestrator.run_pipeline:22] [ETL PHASE 1/3] Extracting raw files...
+[2026-06-11 16:41:40] INFO [Extract.extract_csv:34] Extracting AdventureWorks_Calendar.csv.csv from path: C:\Users\pc\Desktop\BI\Dataset\AdventureWorks_Calendar.csv.csv
+[2026-06-11 16:41:40] INFO [Extract.extract_csv:39] Successfully loaded AdventureWorks_Calendar.csv.csv with utf-8-sig encoding. Shape: (912, 1)
+[2026-06-11 16:41:40] INFO [Extract.extract_csv:34] Extracting AdventureWorks_Customers.csv.csv from path: C:\Users\pc\Desktop\BI\Dataset\AdventureWorks_Customers.csv.csv
+[2026-06-11 16:41:40] WARNING [Extract.extract_csv:43] UTF-8 decode failed for AdventureWorks_Customers.csv.csv. Retrying with ISO-8859-1 or latin-1...
+[2026-06-11 16:41:40] INFO [Extract.extract_csv:45] Successfully loaded AdventureWorks_Customers.csv.csv with latin-1 fallback. Shape: (18148, 13)
+[2026-06-11 16:41:40] INFO [Extract.extract_csv:34] Extracting AdventureWorks_Product_Categories.csv.csv from path: C:\Users\pc\Desktop\BI\Dataset\AdventureWorks_Product_Categories.csv.csv
+[2026-06-11 16:41:40] INFO [Extract.extract_csv:39] Successfully loaded AdventureWorks_Product_Categories.csv.csv with utf-8-sig encoding. Shape: (4, 2)
+[2026-06-11 16:41:40] INFO [Extract.extract_csv:34] Extracting AdventureWorks_Product_Subcategories.csv.csv from path: C:\Users\pc\Desktop\BI\Dataset\AdventureWorks_Product_Subcategories.csv.csv
+[2026-06-11 16:41:40] INFO [Extract.extract_csv:39] Successfully loaded AdventureWorks_Product_Subcategories.csv.csv with utf-8-sig encoding. Shape: (37, 3)
+[2026-06-11 16:41:40] INFO [Extract.extract_csv:34] Extracting AdventureWorks_Products.csv.csv from path: C:\Users\pc\Desktop\BI\Dataset\AdventureWorks_Products.csv.csv
+[2026-06-11 16:41:40] INFO [Extract.extract_csv:39] Successfully loaded AdventureWorks_Products.csv.csv with utf-8-sig encoding. Shape: (293, 11)
+[2026-06-11 16:41:40] INFO [Extract.extract_csv:34] Extracting AdventureWorks_Returns.csv.csv from path: C:\Users\pc\Desktop\BI\Dataset\AdventureWorks_Returns.csv.csv
+[2026-06-11 16:41:40] INFO [Extract.extract_csv:39] Successfully loaded AdventureWorks_Returns.csv.csv with utf-8-sig encoding. Shape: (1809, 4)
+[2026-06-11 16:41:40] INFO [Extract.extract_csv:34] Extracting AdventureWorks_Territories.csv.csv from path: C:\Users\pc\Desktop\BI\Dataset\AdventureWorks_Territories.csv.csv
+[2026-06-11 16:41:40] INFO [Extract.extract_csv:39] Successfully loaded AdventureWorks_Territories.csv.csv with utf-8-sig encoding. Shape: (10, 4)
+[2026-06-11 16:41:40] INFO [Extract.extract_csv:34] Extracting AdventureWorks_Sales_2015.csv.csv from path: C:\Users\pc\Desktop\BI\Dataset\Sales\AdventureWorks_Sales_2015.csv.csv
+[2026-06-11 16:41:40] INFO [Extract.extract_csv:39] Successfully loaded AdventureWorks_Sales_2015.csv.csv with utf-8-sig encoding. Shape: (2630, 8)
+[2026-06-11 16:41:40] INFO [Extract.extract_csv:34] Extracting AdventureWorks_Sales_2016.csv.csv from path: C:\Users\pc\Desktop\BI\Dataset\Sales\AdventureWorks_Sales_2016.csv.csv
+[2026-06-11 16:41:40] INFO [Extract.extract_csv:39] Successfully loaded AdventureWorks_Sales_2016.csv.csv with utf-8-sig encoding. Shape: (23935, 8)
+[2026-06-11 16:41:40] INFO [Extract.extract_csv:34] Extracting AdventureWorks_Sales_2017.csv.csv from path: C:\Users\pc\Desktop\BI\Dataset\Sales\AdventureWorks_Sales_2017.csv.csv
+[2026-06-11 16:41:40] INFO [Extract.extract_csv:39] Successfully loaded AdventureWorks_Sales_2017.csv.csv with utf-8-sig encoding. Shape: (29481, 8)
+[2026-06-11 16:41:40] INFO [Extract.extract_all:85] Unifying sales datasets (2015, 2016, 2017)...
+[2026-06-11 16:41:40] INFO [Extract.extract_all:87] Unified Sales dataset shape: (56046, 8)
+[2026-06-11 16:41:40] INFO [Orchestrator.run_pipeline:25] Extraction completed in 0.23 seconds.
+[2026-06-11 16:41:40] INFO [Orchestrator.run_pipeline:29] [ETL PHASE 2/3] Transforming datasets...
+[2026-06-11 16:41:40] INFO [Transform.transform_territories:289] Transforming Territories lookup...
+[2026-06-11 16:41:40] INFO [Transform.transform_product_categories:304] Transforming Product Categories lookup...
+[2026-06-11 16:41:40] INFO [Transform.transform_product_subcategories:315] Transforming Product Subcategories lookup...
+[2026-06-11 16:41:40] INFO [Transform.transform_calendar:152] Transforming Calendar dataset...
+[2026-06-11 16:41:40] INFO [Transform.transform_calendar:191] Calendar transformation complete. Shape: (912, 10)
+[2026-06-11 16:41:40] INFO [Transform.transform_customers:11] Transforming Customers dataset...
+[2026-06-11 16:41:41] INFO [Transform.transform_customers:101] Customers transformation complete. Shape: (18148, 21)
+[2026-06-11 16:41:41] INFO [Transform.transform_products:108] Transforming Products dataset...
+[2026-06-11 16:41:41] INFO [Transform.transform_products:145] Products transformation complete. Shape: (293, 14)
+[2026-06-11 16:41:41] INFO [Transform.transform_sales:198] Transforming Sales Fact dataset...
+[2026-06-11 16:41:41] INFO [Transform.transform_sales:226] Enforcing referential integrity on Sales Fact table...
+[2026-06-11 16:41:41] INFO [Transform.transform_sales:250] Sales Fact transformation complete. Final Rows: 56046 (Dropped 0 invalid rows)
+[2026-06-11 16:41:41] INFO [Transform.transform_returns:257] Transforming Returns Fact dataset...
+[2026-06-11 16:41:41] INFO [Transform.transform_returns:273] Enforcing referential integrity on Returns Fact table...
+[2026-06-11 16:41:41] INFO [Transform.transform_returns:282] Returns Fact transformation complete. Final Rows: 1809 (Dropped 0 invalid rows)
+[2026-06-11 16:41:41] INFO [Orchestrator.run_pipeline:32] Transformation completed in 0.77 seconds.
+[2026-06-11 16:41:41] INFO [Orchestrator.run_pipeline:36] [ETL PHASE 3/3] Loading processed data to MySQL...
+[2026-06-11 16:41:41] INFO [Load.get_db_engine:11] Initializing database connection engine...
+[2026-06-11 16:41:42] INFO [Load.get_db_engine:17] Database connection established successfully.
+[2026-06-11 16:41:42] INFO [Load.load_data:64] Beginning the database loading phase...
+[2026-06-11 16:41:42] INFO [Load.load_data:72] Loading 10 records into table `aw_territories_lookup`...
+[2026-06-11 16:41:42] INFO [Load.clear_table:28] Clearing existing data from table: aw_territories_lookup
+[2026-06-11 16:41:42] INFO [Load.clear_table:35] Table aw_territories_lookup truncated successfully.
+[2026-06-11 16:41:42] INFO [Load.load_data:86] Successfully loaded `aw_territories_lookup` table.
+[2026-06-11 16:41:42] INFO [Load.load_data:72] Loading 4 records into table `aw_product_category_lookup`...
+[2026-06-11 16:41:42] INFO [Load.clear_table:28] Clearing existing data from table: aw_product_category_lookup
+[2026-06-11 16:41:42] INFO [Load.clear_table:35] Table aw_product_category_lookup truncated successfully.
+[2026-06-11 16:41:42] INFO [Load.load_data:86] Successfully loaded `aw_product_category_lookup` table.
+[2026-06-11 16:41:42] INFO [Load.load_data:72] Loading 37 records into table `aw_product_subcategory_lookup`...
+[2026-06-11 16:41:42] INFO [Load.clear_table:28] Clearing existing data from table: aw_product_subcategory_lookup
+[2026-06-11 16:41:42] INFO [Load.clear_table:35] Table aw_product_subcategory_lookup truncated successfully.
+[2026-06-11 16:41:42] INFO [Load.load_data:86] Successfully loaded `aw_product_subcategory_lookup` table.
+[2026-06-11 16:41:42] INFO [Load.load_data:72] Loading 912 records into table `aw_calendar_lookup`...
+[2026-06-11 16:41:42] INFO [Load.clear_table:28] Clearing existing data from table: aw_calendar_lookup
+[2026-06-11 16:41:42] INFO [Load.clear_table:35] Table aw_calendar_lookup truncated successfully.
+[2026-06-11 16:41:42] INFO [Load.load_data:86] Successfully loaded `aw_calendar_lookup` table.
+[2026-06-11 16:41:42] INFO [Load.load_data:72] Loading 18148 records into table `aw_customers_lookup`...
+[2026-06-11 16:41:42] INFO [Load.clear_table:28] Clearing existing data from table: aw_customers_lookup
+[2026-06-11 16:41:42] INFO [Load.clear_table:35] Table aw_customers_lookup truncated successfully.
+[2026-06-11 16:41:43] INFO [Load.load_data:86] Successfully loaded `aw_customers_lookup` table.
+[2026-06-11 16:41:43] INFO [Load.load_data:72] Loading 293 records into table `aw_products_lookup`...
+[2026-06-11 16:41:43] INFO [Load.clear_table:28] Clearing existing data from table: aw_products_lookup
+[2026-06-11 16:41:43] INFO [Load.clear_table:35] Table aw_products_lookup truncated successfully.
+[2026-06-11 16:41:43] INFO [Load.load_data:86] Successfully loaded `aw_products_lookup` table.
+[2026-06-11 16:41:43] INFO [Load.load_data:72] Loading 56046 records into table `aw_sales`...
+[2026-06-11 16:41:43] INFO [Load.clear_table:28] Clearing existing data from table: aw_sales
+[2026-06-11 16:41:43] INFO [Load.clear_table:35] Table aw_sales truncated successfully.
+[2026-06-11 16:41:46] INFO [Load.load_data:86] Successfully loaded `aw_sales` table.
+[2026-06-11 16:41:46] INFO [Load.load_data:72] Loading 1809 records into table `aw_returns`...
+[2026-06-11 16:41:46] INFO [Load.clear_table:28] Clearing existing data from table: aw_returns
+[2026-06-11 16:41:46] INFO [Load.clear_table:35] Table aw_returns truncated successfully.
+[2026-06-11 16:41:46] INFO [Load.load_data:86] Successfully loaded `aw_returns` table.
+[2026-06-11 16:41:46] INFO [Load.load_data:91] Loading phase completed successfully.
+[2026-06-11 16:41:46] INFO [Orchestrator.run_pipeline:40] Loading completed in 5.01 seconds.
+[2026-06-11 16:41:46] INFO [Orchestrator.run_pipeline:43] ==============================================
+[2026-06-11 16:41:46] INFO [Orchestrator.run_pipeline:44]   ETL PIPELINE RUN COMPLETED SUCCESSFULLY!    
+[2026-06-11 16:41:46] INFO [Orchestrator.run_pipeline:45]   Total execution time: 6.01 seconds.
+[2026-06-11 16:41:46] INFO [Orchestrator.run_pipeline:46] ==============================================

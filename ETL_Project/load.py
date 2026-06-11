@@ -81,7 +81,7 @@ def load_data(transformed_data, engine):
                 con=engine,
                 if_exists="append",
                 index=False,
-                chunksize=1000
+                chunksize=CHUNK_SIZE
             )
             logger.info(f"Successfully loaded `{table_name}` table.")
         except Exception as e:

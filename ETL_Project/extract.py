@@ -8,12 +8,30 @@ logger = get_logger("Extract")
 def extract_csv(file_name, subfolder="", sep=",", encoding="utf-8-sig"):
     """
     Utility function to load a single CSV file with error handling.
+    Handles both .csv and .csv.csv extensions gracefully.
     """
-    file_path = os.path.join(DATASET_DIR, subfolder, file_name)
-    logger.info(f"Extracting {file_name} from path: {file_path}")
+    # Try both extensions if needed
+    possible_files = [file_name]
+    # If provided file_name has .csv.csv, also try .csv
+    if file_name.endswith(".csv.csv"):
+        possible_files.append(file_name[:-4])  # remove last .csv
+    # If provided file_name has .csv, also try .csv.csv
+    elif file_name.endswith(".csv"):
+        possible_files.append(file_name + ".csv")
     
-    if not os.path.exists(file_path):
-        raise FileNotFoundError(f"Source file not found at: {file_path}")
+    file_path = None
+    actual_file_name = None
+    for candidate in possible_files:
+        candidate_path = os.path.join(DATASET_DIR, subfolder, candidate)
+        if os.path.exists(candidate_path):
+            file_path = candidate_path
+            actual_file_name = candidate
+            break
+    
+    if file_path is None:
+        raise FileNotFoundError(f"Source file not found at: {os.path.join(DATASET_DIR, subfolder, file_name)} (tried {possible_files})")
+    
+    logger.info(f"Extracting {actual_file_name} from path: {file_path}")
         
     try:
         # Try primary encoding
