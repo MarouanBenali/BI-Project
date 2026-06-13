@@ -16,7 +16,8 @@ We will have to take into consideration:
 - **schema.sql**: MySQL data warehouse schema
 - **requirements.txt**: Python dependencies
 - **ETL_Project/**: Complete Python ETL pipeline
-- **Professional_PowerBI_Dashboard_Guide.md**: Full A-to-Z Power BI guide
+- **Professional_PowerBI_Dashboard_Guide.md**: Full A-to-Z Power BI guide (English)
+- **RAPPORT_FRANCAIS.md**: Rapport complet du projet en Français
 - **check_integrity.py**: Data integrity validator
 - **advanced_analysis_queries.sql**: Helpful SQL queries
 - **final_star_schema_fix_summary.sql**: Star schema fixes
