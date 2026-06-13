@@ -142,7 +142,7 @@ def main():
     print(f"Fully Valid Records:          {row[4]:>10,}")
     
     print("\n" + "=" * 80)
-    print("INTEGRITY CHECK COMPLETED - ALL DATA IS CLEAN! ✅")
+    print("INTEGRITY CHECK COMPLETED - ALL DATA IS CLEAN! OK")
     print("=" * 80)
     
     conn.close()
