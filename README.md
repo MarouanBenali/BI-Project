@@ -2,7 +2,7 @@
 
 ## 📋 Overview
 This is a **complete, production-ready Business Intelligence (BI) project** built using Microsoft's AdventureWorks dataset.
-It includes a Python ETL pipeline, a MySQL data warehouse (Star Schema), and a full guide to building a professional Power BI dashboard.
+It includes a Python ETL pipeline, a MySQL data warehouse (Star Schema), a full guide to building a professional Power BI dashboard, **and machine learning features!
 
 ---
 
@@ -13,6 +13,7 @@ It includes a Python ETL pipeline, a MySQL data warehouse (Star Schema), and a f
 | **Data Warehouse**    | MySQL                |
 | **Visualization**     | Power BI Desktop     |
 | **Data Modeling**     | MySQL Workbench      |
+| **Machine Learning**  | scikit-learn, pandas |
 
 ---
 
@@ -31,8 +32,13 @@ BI-Project/
 │   ├── load.py                   # Data loading logic
 │   ├── config.py                 # Central configuration
 │   └── utils.py                  # Helper functions
+├── ML/                            # Machine Learning scripts
+│   ├── customer_segmentation.py # Customer Segmentation using K-Means
+│   ├── sales_forecasting.py       # Sales Forecasting
+│   └── README.md
 ├── MySql Workbanch/              # MySQL files (schema, queries)
 │   ├── advanced_analysis_queries.sql
+│   ├── final_star_schema_fix_summary.sql
 │   └── schema.sql
 ├── PowerBI/                      # Power BI dashboard files
 │   ├── PowerBI.pbix
@@ -65,6 +71,30 @@ BI-Project/
 
 ---
 
+## 🤖 Machine Learning Features
+### 1. Customer Segmentation (K-Means Clustering)
+Segments customers into meaningful groups based on:
+- Age
+- Total Orders
+- Total Quantity Purchased
+
+**How to run:**
+```powershell
+python ML/customer_segmentation.py
+```
+
+### 2. Sales Forecasting (Time Series)
+Forecasts future monthly sales using Linear Regression (with lag features)
+
+**How to run:**
+```powershell
+python ML/sales_forecasting.py
+```
+
+Results and visualizations are saved in `ML/results/`!
+
+---
+
 ## 📊 Data Model (Star Schema)
 ### Fact Tables
 - `aw_sales` (Sales transactions)
@@ -83,11 +113,12 @@ All foreign key constraints are properly set up and validated!
 ---
 
 ## ✨ Key Features
-✅ **Production-ready Python ETL pipeline** (~8 seconds execution time)
+✅ **Production-ready Python ETL pipeline** (~21 seconds execution time)
 ✅ **Fully functional Star Schema data warehouse**
 ✅ **100% data integrity validated**
 ✅ **Professional Power BI dashboard included**
 ✅ **Advanced SQL analysis queries**
+✅ **Machine Learning Features (Customer Segmentation, Sales Forecasting)**
 ✅ **Complete project documentation** (PPTX, DOCX, diagrams)
 ✅ **Portfolio-ready project structure**
 
@@ -98,6 +129,7 @@ All foreign key constraints are properly set up and validated!
 - Diagrams available in `Diagrams/`
 - SQL queries available in `MySql Workbanch/`
 - Power BI dashboard in `PowerBI/`
+- ML scripts and README in `ML/`
 
 ---
 
